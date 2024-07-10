@@ -36,9 +36,9 @@ INSERT INTO DIM_MASTER_ORGANISATION([Location Code]
   FROM [dbo].[TMP_DIM_MASTER_ORGANISATION];
 -- end SQL001 --
 
---workflow SQL002 exercise--
+--workflow SQL002--
 --this flow adds UID key that is created combining [Account 2-digits] and [Account Group], meta data field about data source are added
---exercise Q1
+
 CREATE TABLE [DIM_MASTER_ACCOUNTGROUPS](
 	[Account 2-digits] [nvarchar](255) NOT NULL,
 	[Account Type] [nvarchar](255) NOT NULL,
@@ -138,7 +138,7 @@ from TMP_DIM_MASTER_ORGANIZATION
 group by Company, [Department Number], [Cost Center]
 
 
--- SQL004 -- Future Cost exercise --
+-- SQL004 
 CREATE TABLE [DTO_TOC_FUT_2020_2H](
 	[Cost Center] [nvarchar](255) NULL,
 	[Department Number] [nvarchar](254) NULL,
@@ -161,7 +161,7 @@ CREATE TABLE [DTO_TOC_FUT_2020_2H](
 	[UpdatedBy] [nvarchar](255) NULL,
 	[Updateddate] [datetime] NULL
 );
---exercise Q2
+
 -- SQL004 end script  
 -- SQL005 -- implement workflow that has employee information per month as well as associate department and cost information. 
 CREATE TABLE [DTO_Employees_REA_2018_C](
@@ -280,5 +280,5 @@ CREATE TABLE [DVA_TOC_EMPLOYEE_DASHBOARD](
 	[Employees] [float] NULL
 );
 --create a view--
---exercise Q3
+
 --end script--
